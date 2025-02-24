@@ -18,13 +18,13 @@ class EmployeeController {
 
     @GetMapping("/{id}")
     public Employee getEmployeeById(@PathVariable Long id) { return service.getEmployeeById(id); }
-
+    // post http method
     @PostMapping
     public Employee addEmployee(@RequestBody Employee employee) { return service.addEmployee(employee); }
-
+    // put https method
     @PutMapping("/{id}")
     public Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employee) { return service.updateEmployee(id, employee); }
-
+    // delete http method
     @DeleteMapping("/{id}")
     public void deleteEmployee(@PathVariable Long id) { service.deleteEmployee(id); }
 }
