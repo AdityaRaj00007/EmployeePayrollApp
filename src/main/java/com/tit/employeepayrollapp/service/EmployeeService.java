@@ -3,6 +3,7 @@ package com.tit.employeepayrollapp.service;
 import com.tit.employeepayrollapp.dto.EmployeeDTO;
 import com.tit.employeepayrollapp.entity.Employee;
 import com.tit.employeepayrollapp.repository.EmployeeRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class EmployeeService {
     @Autowired
     private EmployeeRepository repository;
