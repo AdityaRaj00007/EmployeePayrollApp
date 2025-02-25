@@ -8156,3 +8156,95 @@ java.lang.Throwable: Runtime.exit(130)
 2025-02-25T16:33:30.419+05:30  INFO 30148 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-02-25T16:33:30.422+05:30  INFO 30148 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-02-25T16:33:30.430+05:30  INFO 30148 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-25T16:46:39.545+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] c.t.e.EmployeePayrollAppApplication      : Starting EmployeePayrollAppApplication using Java 21.0.6 with PID 9628 (C:\Users\rajgu\OneDrive\Desktop\EmployeePayrollApp\target\classes started by rajgu in C:\Users\rajgu\OneDrive\Desktop\EmployeePayrollApp)
+2025-02-25T16:46:39.547+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] c.t.e.EmployeePayrollAppApplication      : The following 1 profile is active: "prod"
+2025-02-25T16:46:39.598+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-25T16:46:39.598+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-25T16:46:40.328+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-25T16:46:40.402+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2025-02-25T16:46:41.074+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-25T16:46:41.091+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-25T16:46:41.091+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-25T16:46:41.135+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-25T16:46:41.137+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1539 ms
+2025-02-25T16:46:41.295+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-25T16:46:41.349+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-02-25T16:46:41.383+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-25T16:46:41.692+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-25T16:46:41.725+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-25T16:46:42.054+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e67914a
+2025-02-25T16:46:42.056+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-25T16:46:42.103+05:30  WARN 9628 --- [EmployeePayrollApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-25T16:46:42.120+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-25T16:46:42.778+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-25T16:46:42.824+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-25T16:46:43.117+05:30  WARN 9628 --- [EmployeePayrollApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-25T16:46:43.471+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-25T16:46:43.505+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-25T16:46:43.514+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] c.t.e.EmployeePayrollAppApplication      : Started EmployeePayrollAppApplication in 4.518 seconds (process running for 5.022)
+2025-02-25T16:46:43.519+05:30  INFO 9628 --- [EmployeePayrollApp] [restartedMain] c.t.e.EmployeePayrollAppApplication      : Employee Payroll App strated
+2025-02-25T16:46:55.242+05:30  INFO 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-25T16:46:55.242+05:30  INFO 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-25T16:46:55.244+05:30  INFO 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-25T16:46:55.271+05:30  WARN 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-02-25T16:47:02.235+05:30  WARN 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-02-25T16:47:48.706+05:30  WARN 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.tit.employeepayrollapp.exception.EmployeeNotFoundException: Employee with ID 11 not found.]
+2025-02-25T16:48:41.828+05:30  WARN 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-02-25T16:49:36.047+05:30  WARN 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-02-25T16:49:37.054+05:30  WARN 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-02-25T16:49:40.255+05:30  WARN 9628 --- [EmployeePayrollApp] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2025-02-25T16:50:03.835+05:30  INFO 9628 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-25T16:50:03.841+05:30  INFO 9628 --- [EmployeePayrollApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-25T16:50:03.845+05:30  INFO 9628 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-25T16:50:03.847+05:30  INFO 9628 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-25T16:50:03.856+05:30  INFO 9628 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-25T16:50:07.429+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] c.t.e.EmployeePayrollAppApplication      : Starting EmployeePayrollAppApplication using Java 21.0.6 with PID 28216 (C:\Users\rajgu\OneDrive\Desktop\EmployeePayrollApp\target\classes started by rajgu in C:\Users\rajgu\OneDrive\Desktop\EmployeePayrollApp)
+2025-02-25T16:50:07.433+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] c.t.e.EmployeePayrollAppApplication      : The following 1 profile is active: "prod"
+2025-02-25T16:50:07.497+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-25T16:50:07.498+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-25T16:50:08.304+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-25T16:50:08.375+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2025-02-25T16:50:08.994+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-25T16:50:09.012+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-25T16:50:09.013+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-25T16:50:09.065+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-25T16:50:09.065+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1567 ms
+2025-02-25T16:50:09.219+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-25T16:50:09.275+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-02-25T16:50:09.313+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-25T16:50:09.632+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-25T16:50:09.663+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-25T16:50:10.006+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b074897
+2025-02-25T16:50:10.008+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-25T16:50:10.056+05:30  WARN 28216 --- [EmployeePayrollApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-25T16:50:10.072+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-25T16:50:10.736+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-25T16:50:10.778+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-25T16:50:11.053+05:30  WARN 28216 --- [EmployeePayrollApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-25T16:50:11.407+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-25T16:50:11.437+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-25T16:50:11.446+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] c.t.e.EmployeePayrollAppApplication      : Started EmployeePayrollAppApplication in 4.612 seconds (process running for 5.138)
+2025-02-25T16:50:11.449+05:30  INFO 28216 --- [EmployeePayrollApp] [restartedMain] c.t.e.EmployeePayrollAppApplication      : Employee Payroll App strated
+2025-02-25T16:50:18.877+05:30  INFO 28216 --- [EmployeePayrollApp] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-25T16:50:18.877+05:30  INFO 28216 --- [EmployeePayrollApp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-25T16:50:18.880+05:30  INFO 28216 --- [EmployeePayrollApp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-25T16:50:23.059+05:30  WARN 28216 --- [EmployeePayrollApp] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.tit.employeepayrollapp.exception.EmployeeNotFoundException: Employee with ID 11 not found.]
+2025-02-25T16:55:41.678+05:30  INFO 28216 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-25T16:55:41.686+05:30  INFO 28216 --- [EmployeePayrollApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-25T16:55:41.688+05:30  INFO 28216 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-25T16:55:41.691+05:30  INFO 28216 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-25T16:55:41.698+05:30  INFO 28216 --- [EmployeePayrollApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

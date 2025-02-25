@@ -2,6 +2,7 @@ package com.tit.employeepayrollapp.service;
 
 import com.tit.employeepayrollapp.dto.EmployeeDTO;
 import com.tit.employeepayrollapp.entity.Employee;
+import com.tit.employeepayrollapp.exception.EmployeeNotFoundException;
 import com.tit.employeepayrollapp.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -39,14 +40,14 @@ public class EmployeeService {
         return ResponseEntity.ok(employees);
     }
 
-    public ResponseEntity<EmployeeDTO> getEmployeeById(Long id) {
+    public EmployeeDTO getEmployeeById(Long id) {
         Employee employee = repository.findById(id).orElse(null);
-        if (employee != null) {
-            return ResponseEntity.ok(convertToDTO(employee));
-        } else {
-            return ResponseEntity.notFound().build();
+        if (employee == null) {
+            throw new EmployeeNotFoundException(id);
         }
+        return convertToDTO(employee);
     }
+
 
     public ResponseEntity<EmployeeDTO> addEmployee(EmployeeDTO dto) {
         Employee employee = convertToEntity(dto);
