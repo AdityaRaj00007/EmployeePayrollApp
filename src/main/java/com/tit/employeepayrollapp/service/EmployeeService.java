@@ -6,6 +6,7 @@ import com.tit.employeepayrollapp.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,41 +21,56 @@ public class EmployeeService {
     @Autowired
     private ModelMapper modelMapper;
 
+    // Convert Entity to DTO
     private EmployeeDTO convertToDTO(Employee employee) {
         return modelMapper.map(employee, EmployeeDTO.class);
     }
 
+    // Convert DTO to Entity
     private Employee convertToEntity(EmployeeDTO dto) {
         return modelMapper.map(dto, Employee.class);
     }
 
-    public List<EmployeeDTO> getAllEmployees() {
-        return repository.findAll()
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployees() {
+        List<EmployeeDTO> employees = repository.findAll()
                 .stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
+        return ResponseEntity.ok(employees);
     }
 
-    public EmployeeDTO getEmployeeById(Long id) {
-        return repository.findById(id)
-                .map(this::convertToDTO)
-                .orElse(null);
+    public ResponseEntity<EmployeeDTO> getEmployeeById(Long id) {
+        Employee employee = repository.findById(id).orElse(null);
+        if (employee != null) {
+            return ResponseEntity.ok(convertToDTO(employee));
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
-    public EmployeeDTO addEmployee(EmployeeDTO dto) {
+    public ResponseEntity<EmployeeDTO> addEmployee(EmployeeDTO dto) {
         Employee employee = convertToEntity(dto);
         Employee savedEmployee = repository.save(employee);
-        return convertToDTO(savedEmployee);
+        return ResponseEntity.ok(convertToDTO(savedEmployee));
     }
 
-    public EmployeeDTO updateEmployee(Long id, EmployeeDTO dto) {
-        Employee employee = convertToEntity(dto);
-        employee.setId(id);
-        Employee updatedEmployee = repository.save(employee);
-        return convertToDTO(updatedEmployee);
+    public ResponseEntity<EmployeeDTO> updateEmployee(Long id, EmployeeDTO dto) {
+        if (repository.existsById(id)) {
+            Employee employee = convertToEntity(dto);
+            employee.setId(id);
+            Employee updatedEmployee = repository.save(employee);
+            return ResponseEntity.ok(convertToDTO(updatedEmployee));
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
-    public void deleteEmployee(Long id) {
-        repository.deleteById(id);
+    public ResponseEntity<Void> deleteEmployee(Long id) {
+        if (repository.existsById(id)) {
+            repository.deleteById(id);
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }
