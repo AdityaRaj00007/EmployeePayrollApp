@@ -3,8 +3,10 @@ package com.tit.employeepayrollapp.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 public class EmployeeDTO {
     private Long id;
     @NotBlank(message = "Name is required and cannot be empty")
@@ -12,4 +14,8 @@ public class EmployeeDTO {
     private String name;
     private double salary;
     private String department;
+    private String gender;
+    private String startDate;
+    private String note;
+    private String profilePic;
 }

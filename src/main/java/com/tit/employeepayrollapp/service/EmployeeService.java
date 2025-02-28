@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 public class EmployeeService {
+
     @Autowired
     private EmployeeRepository repository;
 
@@ -48,7 +49,6 @@ public class EmployeeService {
         return convertToDTO(employee);
     }
 
-
     public ResponseEntity<EmployeeDTO> addEmployee(EmployeeDTO dto) {
         Employee employee = convertToEntity(dto);
         Employee savedEmployee = repository.save(employee);
@@ -58,7 +58,7 @@ public class EmployeeService {
     public ResponseEntity<EmployeeDTO> updateEmployee(Long id, EmployeeDTO dto) {
         if (repository.existsById(id)) {
             Employee employee = convertToEntity(dto);
-            employee.setId(id);
+            employee.setId(id); // Preserve existing ID
             Employee updatedEmployee = repository.save(employee);
             return ResponseEntity.ok(convertToDTO(updatedEmployee));
         } else {
