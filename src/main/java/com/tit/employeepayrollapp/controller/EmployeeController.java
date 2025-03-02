@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {
+
     @Autowired
     private EmployeeService service;
 
@@ -38,5 +39,10 @@ public class EmployeeController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteEmployee(@PathVariable Long id) {
         return service.deleteEmployee(id);
+    }
+
+    @GetMapping("/department/{department}")
+    public ResponseEntity<List<EmployeeDTO>> getEmployeesByDepartment(@PathVariable String department) {
+        return service.getEmployeesByDepartment(department);
     }
 }

@@ -42,10 +42,8 @@ public class EmployeeService {
     }
 
     public EmployeeDTO getEmployeeById(Long id) {
-        Employee employee = repository.findById(id).orElse(null);
-        if (employee == null) {
-            throw new EmployeeNotFoundException(id);
-        }
+        Employee employee = repository.findById(id)
+                .orElseThrow(() -> new EmployeeNotFoundException(id));
         return convertToDTO(employee);
     }
 
@@ -62,7 +60,7 @@ public class EmployeeService {
             Employee updatedEmployee = repository.save(employee);
             return ResponseEntity.ok(convertToDTO(updatedEmployee));
         } else {
-            return ResponseEntity.notFound().build();
+            throw new EmployeeNotFoundException(id);
         }
     }
 
@@ -71,7 +69,15 @@ public class EmployeeService {
             repository.deleteById(id);
             return ResponseEntity.noContent().build();
         } else {
-            return ResponseEntity.notFound().build();
+            throw new EmployeeNotFoundException(id);
         }
+    }
+
+    public ResponseEntity<List<EmployeeDTO>> getEmployeesByDepartment(String department) {
+        List<EmployeeDTO> employees = repository.findByDepartment(department)
+                .stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(employees);
     }
 }
