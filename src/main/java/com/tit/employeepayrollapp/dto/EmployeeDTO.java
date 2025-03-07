@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.cglib.core.Local;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -21,7 +21,8 @@ public class EmployeeDTO {
     private String department;
     @Pattern(regexp = "male|female" , message = "Gender needs to be male or female")
     private String gender;
-    @JsonFormat(pattern="dd MMM yyyy")
+    @JsonFormat(pattern="dd-MM-yyyy")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @NotNull(message = "startDate should Not be Empty")
     @PastOrPresent(message = "startDate should be past or today's date")
     private LocalDate startDate;

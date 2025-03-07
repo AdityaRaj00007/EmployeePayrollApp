@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
+import java.time.LocalDate;
+
 @Entity
 @Data
 @Slf4j
@@ -17,7 +19,7 @@ public class Employee {
     private double salary;
     private String department;
     private String gender;
-    private String startDate;
+    private LocalDate startDate;
     private String note;
     private String profilePic;
 
